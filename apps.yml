@@ -1,0 +1,31 @@
+- hosts: backend
+  become: yes
+  tasks:
+    - name: "Git Clone Backend"
+      git:
+        repo: git@github.com:mufid96/lit-backend.git
+        dest: /home/be/lit-backend
+
+- hosts: backend2
+  become: yes
+  tasks:
+    - name: "Git Clone Backend"
+      git:
+        repo: git@github.com:mufid96/lit-backend.git
+        dest: /home/be2
+
+- hosts: frontend
+  become: yes
+  tasks:
+    - name: "Git Clone Frontend"
+      git:
+        repo: git@github.com:mufid96/lit-frontend.git
+        dest: /home/fe
+
+- hosts: frontend2
+  become: yes
+  tasks:
+    - name: "Git Clone Frontend"
+      git:
+        repo: git@github.com:mufid96/lit-frontend.git
+        dest: /home/fe2

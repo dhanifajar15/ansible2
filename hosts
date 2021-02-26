@@ -1,0 +1,15 @@
+[servers]
+public ansible_host=10.0.0.191 ansible_ssh_user=public
+[front]
+frontend ansible_host=10.0.1.157 ansible_ssh_user=ubuntu
+frontend2 ansible_host=10.0.2.39 ansible_ssh_user=ubuntu
+[back]
+backend ansible_host=10.0.1.126 ansible_ssh_user=backend
+backend2 ansible_host=10.0.2.138 ansible_ssh_user=backend2
+[dbase]
+database ansible_host=10.0.1.149 ansible_ssh_user=ubuntu
+database2 ansible_host=10.0.2.63 ansible_ssh_user=ubuntu
+[cicd]
+jenkins ansible_host=10.0.1.88 ansible_ssh_user=ubuntu
+[monitoring]
+monitor ansible_host=localhost ansible_ssh_user=monitor
